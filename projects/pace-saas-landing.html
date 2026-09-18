@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pace — SaaS Landing Page | Amber Syed</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">Amber Syed</div>
+            <div class="nav-right" style="margin-left:auto;">
+                <button class="theme-toggle-btn" id="themeToggle" title="Toggle light/dark mode">🌙</button>
+                <a href="../index.html#projects" class="btn-nav">Back to Portfolio</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="detail-header">
+        <a href="../index.html#projects" class="detail-back">← All Projects</a>
+        <div class="detail-tags project-tags">
+            <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+        </div>
+        <h1 class="detail-title">Pace — SaaS Landing Page</h1>
+        <p class="detail-desc">A polished marketing landing page for a fictional project-management SaaS, with an interactive live demo widget, testimonials, and a feature breakdown.</p>
+        <div class="detail-actions">
+            <a href="https://paceworkspace.netlify.app/" target="_blank" class="btn-primary">View Live Demo</a>
+            <a href="https://github.com/ambersyed195-ship-it/pace-saas-website" target="_blank" class="btn-outline">View Source Code</a>
+        </div>
+    </div>
+
+    <div class="detail-image reveal active">
+        <img src="../images/pace.jpg" alt="Pace SaaS landing page hero section" class="mockup-svg">
+    </div>
+
+    <div class="detail-body">
+        <div>
+            <h2>Project Overview</h2>
+            <p>Pace is a marketing landing page designed the way a real SaaS product would launch one — built to convert visitors into sign-ups. It includes an interactive product demo widget so visitors can see the product in action before committing, along with social proof and a clear feature breakdown.</p>
+            <h2>Key Features</h2>
+            <ul class="feature-list">
+                <li>Interactive live product demo widget</li>
+                <li>Customer testimonials section for social proof</li>
+                <li>Feature breakdown grid explaining core benefits</li>
+                <li>Fully responsive marketing layout</li>
+                <li>Smooth scroll and entrance animation effects</li>
+                <li>Clear calls-to-action throughout the page</li>
+            </ul>
+        </div>
+        <div class="detail-side">
+            <h4>Tech Stack</h4>
+            <div class="project-tags">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+            </div>
+            <h4>My Role</h4>
+            <p>Designed and coded the full landing page, including the interactive demo widget and all animations.</p>
+            <h4>Links</h4>
+            <p><a href="https://paceworkspace.netlify.app/" target="_blank" style="color:var(--accent);">Live Demo →</a></p>
+            <p><a href="https://github.com/ambersyed195-ship-it/pace-saas-website" target="_blank" style="color:var(--accent);">Source Code →</a></p>
+        </div>
+    </div>
+
+    <section class="other-projects">
+        <h3>Other Projects</h3>
+        <div class="other-projects-grid">
+            <a href="tasty-bites.html" class="other-project-link">Tasty Bites</a>
+                <a href="lumora-ecommerce.html" class="other-project-link">Lumora</a>
+                <a href="taskflow-dashboard.html" class="other-project-link">TaskFlow</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="logo">Amber Syed</div>
+            <p>&copy; 2026 Amber Syed. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const themeToggle = document.getElementById('themeToggle');
+        const htmlEl = document.documentElement;
+        function applyTheme(theme) {
+            htmlEl.setAttribute('data-theme', theme);
+            themeToggle.textContent = theme === 'dark' ? '☀️' : '🌙';
+            localStorage.setItem('portfolio_theme', theme);
+        }
+        applyTheme(localStorage.getItem('portfolio_theme') || 'dark');
+        themeToggle.addEventListener('click', () => {
+            applyTheme(htmlEl.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
+        });
+    </script>
+
+</body>
+</html>

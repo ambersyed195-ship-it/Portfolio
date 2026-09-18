@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lumora — E-Commerce Store | Amber Syed</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">Amber Syed</div>
+            <div class="nav-right" style="margin-left:auto;">
+                <button class="theme-toggle-btn" id="themeToggle" title="Toggle light/dark mode">🌙</button>
+                <a href="../index.html#projects" class="btn-nav">Back to Portfolio</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="detail-header">
+        <a href="../index.html#projects" class="detail-back">← All Projects</a>
+        <div class="detail-tags project-tags">
+            <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+        </div>
+        <h1 class="detail-title">Lumora — E-Commerce Store</h1>
+        <p class="detail-desc">A multi-page fashion storefront with a working cart, wishlist, category filters, sorting, and a full checkout flow with order summary and payment method selection.</p>
+        <div class="detail-actions">
+            <a href="https://commercpage.netlify.app/" target="_blank" class="btn-primary">View Live Demo</a>
+            <a href="https://github.com/ambersyed195-ship-it/E-Commerce" target="_blank" class="btn-outline">View Source Code</a>
+        </div>
+    </div>
+
+    <div class="detail-image reveal active">
+        <img src="../images/lumora.jpg" alt="Lumora e-commerce store product grid" class="mockup-svg">
+    </div>
+
+    <div class="detail-body">
+        <div>
+            <h2>Project Overview</h2>
+            <p>Lumora was built to simulate a real fashion e-commerce experience — from browsing products to completing checkout. The goal was to demonstrate a complete shopping flow that a real online store could use, with clean navigation and a polished, modern look.</p>
+            <h2>Key Features</h2>
+            <ul class="feature-list">
+                <li>Shopping cart with quantity controls and live totals</li>
+                <li>Wishlist to save items for later</li>
+                <li>Category filters and product sorting</li>
+                <li>Multi-step checkout flow</li>
+                <li>Order summary with payment method selection</li>
+                <li>Fully responsive multi-page layout</li>
+            </ul>
+        </div>
+        <div class="detail-side">
+            <h4>Tech Stack</h4>
+            <div class="project-tags">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+            </div>
+            <h4>My Role</h4>
+            <p>Built the complete front-end architecture across multiple pages, including cart/wishlist logic in JavaScript and all page layouts.</p>
+            <h4>Links</h4>
+            <p><a href="https://commercpage.netlify.app/" target="_blank" style="color:var(--accent);">Live Demo →</a></p>
+            <p><a href="https://github.com/ambersyed195-ship-it/E-Commerce" target="_blank" style="color:var(--accent);">Source Code →</a></p>
+        </div>
+    </div>
+
+    <section class="other-projects">
+        <h3>Other Projects</h3>
+        <div class="other-projects-grid">
+            <a href="tasty-bites.html" class="other-project-link">Tasty Bites</a>
+                <a href="taskflow-dashboard.html" class="other-project-link">TaskFlow</a>
+                <a href="pace-saas-landing.html" class="other-project-link">Pace</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="logo">Amber Syed</div>
+            <p>&copy; 2026 Amber Syed. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const themeToggle = document.getElementById('themeToggle');
+        const htmlEl = document.documentElement;
+        function applyTheme(theme) {
+            htmlEl.setAttribute('data-theme', theme);
+            themeToggle.textContent = theme === 'dark' ? '☀️' : '🌙';
+            localStorage.setItem('portfolio_theme', theme);
+        }
+        applyTheme(localStorage.getItem('portfolio_theme') || 'dark');
+        themeToggle.addEventListener('click', () => {
+            applyTheme(htmlEl.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
+        });
+    </script>
+
+</body>
+</html>

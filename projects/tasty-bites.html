@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasty Bites — Restaurant Website | Amber Syed</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">Amber Syed</div>
+            <div class="nav-right" style="margin-left:auto;">
+                <button class="theme-toggle-btn" id="themeToggle" title="Toggle light/dark mode">🌙</button>
+                <a href="../index.html#projects" class="btn-nav">Back to Portfolio</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="detail-header">
+        <a href="../index.html#projects" class="detail-back">← All Projects</a>
+        <div class="detail-tags project-tags">
+            <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+        </div>
+        <h1 class="detail-title">Tasty Bites — Restaurant Website</h1>
+        <p class="detail-desc">A fully responsive restaurant landing page built to help a restaurant showcase its menu and attract online orders. It includes a filterable menu, an image gallery with lightbox, a testimonial slider, and a fully validated contact form.</p>
+        <div class="detail-actions">
+            <a href="https://tastbiteszone.netlify.app/" target="_blank" class="btn-primary">View Live Demo</a>
+            <a href="https://github.com/ambersyed195-ship-it/restaurant-landing-page" target="_blank" class="btn-outline">View Source Code</a>
+        </div>
+    </div>
+
+    <div class="detail-image reveal active">
+        <img src="../images/tasty-bites.jpg" alt="Tasty Bites restaurant website menu page" class="mockup-svg">
+    </div>
+
+    <div class="detail-body">
+        <div>
+            <h2>Project Overview</h2>
+            <p>This project was built for a restaurant that needed a fast, mobile-friendly website to showcase its menu and build trust with new customers. Every section — from the menu to the contact form — was designed to load quickly and work smoothly on any device, so visitors can browse and get in touch without friction.</p>
+            <h2>Key Features</h2>
+            <ul class="feature-list">
+                <li>Filterable food menu, organized by category</li>
+                <li>Image gallery with a lightbox popup for food photos</li>
+                <li>Customer testimonial slider to build trust</li>
+                <li>Fully validated contact form with error messages</li>
+                <li>Mobile-first responsive layout for phones and tablets</li>
+                <li>Smooth scroll navigation between sections</li>
+            </ul>
+        </div>
+        <div class="detail-side">
+            <h4>Tech Stack</h4>
+            <div class="project-tags">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+            </div>
+            <h4>My Role</h4>
+            <p>Designed and developed the full front-end from scratch, including layout, styling, and all interactive JavaScript functionality.</p>
+            <h4>Links</h4>
+            <p><a href="https://tastbiteszone.netlify.app/" target="_blank" style="color:var(--accent);">Live Demo →</a></p>
+            <p><a href="https://github.com/ambersyed195-ship-it/restaurant-landing-page" target="_blank" style="color:var(--accent);">Source Code →</a></p>
+        </div>
+    </div>
+
+    <section class="other-projects">
+        <h3>Other Projects</h3>
+        <div class="other-projects-grid">
+            <a href="lumora-ecommerce.html" class="other-project-link">Lumora</a>
+                <a href="taskflow-dashboard.html" class="other-project-link">TaskFlow</a>
+                <a href="pace-saas-landing.html" class="other-project-link">Pace</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="logo">Amber Syed</div>
+            <p>&copy; 2026 Amber Syed. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const themeToggle = document.getElementById('themeToggle');
+        const htmlEl = document.documentElement;
+        function applyTheme(theme) {
+            htmlEl.setAttribute('data-theme', theme);
+            themeToggle.textContent = theme === 'dark' ? '☀️' : '🌙';
+            localStorage.setItem('portfolio_theme', theme);
+        }
+        applyTheme(localStorage.getItem('portfolio_theme') || 'dark');
+        themeToggle.addEventListener('click', () => {
+            applyTheme(htmlEl.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
+        });
+    </script>
+
+</body>
+</html>

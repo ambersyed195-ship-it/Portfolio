@@ -1,9 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Amber Syed - Frontend Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -16,16 +19,62 @@
     <!-- Header/Navbar -->
     <header>
         <nav class="navbar">
-            <div class="logo">Amber<span>.dev</span></div>
+            <div class="logo">Amber Syed</div>
             <ul class="nav-links">
                 <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#resume" class="nav-link">Experience</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
                 <li><a href="#skills" class="nav-link">Skills</a></li>
                 <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#testimonials" class="nav-link">Reviews</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
+
+                <!-- Get in touch quick panel — visible only inside the mobile menu -->
+                <li class="mobile-contact-panel">
+                    <p class="mcp-title">Get in touch</p>
+                    <p class="mcp-subtitle">I'm always excited to take on new projects and collaborate with innovative minds.</p>
+
+                    <a href="https://wa.me/923229653604" target="_blank" class="mcp-item">
+                        <span class="mcp-icon">💬</span>
+                        <span class="mcp-text">
+                            <span class="mcp-label">WhatsApp</span>
+                            <span class="mcp-value">+92 322 9653604</span>
+                        </span>
+                    </a>
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=ambersyed462@gmail.com" target="_blank" class="mcp-item">
+                        <span class="mcp-icon">✉️</span>
+                        <span class="mcp-text">
+                            <span class="mcp-label">Email</span>
+                            <span class="mcp-value">ambersyed462@gmail.com</span>
+                        </span>
+                    </a>
+                    <a href="#" target="_blank" class="mcp-item">
+                        <span class="mcp-icon">💼</span>
+                        <span class="mcp-text">
+                            <span class="mcp-label">LinkedIn</span>
+                            <span class="mcp-value">Add your profile</span>
+                        </span>
+                    </a>
+                    <a href="https://github.com/ambersyed195-ship-it" target="_blank" class="mcp-item">
+                        <span class="mcp-icon">🐙</span>
+                        <span class="mcp-text">
+                            <span class="mcp-label">GitHub</span>
+                            <span class="mcp-value">ambersyed195-ship-it</span>
+                        </span>
+                    </a>
+                    <div class="mcp-item mcp-static">
+                        <span class="mcp-icon">📍</span>
+                        <span class="mcp-text">
+                            <span class="mcp-label">Address</span>
+                            <span class="mcp-value">Venus Housing, Lahore, Punjab, Pakistan</span>
+                        </span>
+                    </div>
+                </li>
             </ul>
-            <a href="#contact" class="btn-nav">Let's Talk</a>
+            <div class="nav-right">
+                <button class="theme-toggle-btn" id="themeToggle" title="Toggle light/dark mode">🌙</button>
+                <a href="#contact" class="btn-nav">Let's Talk</a>
+            </div>
             <div class="hamburger">
                 <span></span>
                 <span></span>
@@ -36,30 +85,86 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="hero-content">
-            <p class="hero-greeting reveal">👋 Available for freelance work</p>
-            <h1 class="reveal">Amber Syed</h1>
-            <h2 class="hero-title reveal">
-                I build <span class="typed-text" id="typedText"></span><span class="cursor">|</span>
-            </h2>
-            <p class="hero-desc reveal">Frontend Developer crafting clean, responsive, and high-performance websites — turning designs into pixel-perfect, functional experiences.</p>
-            <div class="hero-buttons reveal">
-                <a href="#projects" class="btn-primary">View My Work</a>
-                <a href="#contact" class="btn-outline">Get In Touch</a>
+        <div class="hero-inner">
+            <div class="hero-content">
+                <p class="hero-greeting reveal">👋 Available for freelance work</p>
+                <h1 class="reveal">Amber Syed</h1>
+                <h2 class="hero-title reveal">
+                    I build <span class="typed-text" id="typedText"></span><span class="cursor">|</span>
+                </h2>
+                <p class="hero-desc reveal">Frontend Developer with 2+ years of experience crafting clean, responsive, and high-performance websites — turning designs into pixel-perfect, functional experiences.</p>
+                <div class="hero-buttons reveal">
+                    <a href="#projects" class="btn-primary">View My Work</a>
+                    <a href="#contact" class="btn-outline">Get In Touch</a>
+                </div>
+                <div class="hero-stats reveal">
+                    <div class="hero-stat">
+                        <h3><span class="counter" data-target="2">0</span>+</h3>
+                        <p>Years Experience</p>
+                    </div>
+                    <div class="hero-stat">
+                        <h3><span class="counter" data-target="8">0</span>+</h3>
+                        <p>Projects Completed</p>
+                    </div>
+                    <div class="hero-stat">
+                        <h3><span class="counter" data-target="100">0</span>%</h3>
+                        <p>Responsive Design</p>
+                    </div>
+                </div>
             </div>
-            <div class="hero-stats reveal">
-                <div class="hero-stat">
-                    <h3><span class="counter" data-target="2">0</span>+</h3>
-                    <p>Projects Built</p>
-                </div>
-                <div class="hero-stat">
-                    <h3><span class="counter" data-target="100">0</span>%</h3>
-                    <p>Responsive Design</p>
-                </div>
-                <div class="hero-stat">
-                    <h3><span class="counter" data-target="4">0</span></h3>
-                    <p>Core Technologies</p>
-                </div>
+
+            <div class="hero-illustration reveal">
+                <svg viewBox="0 0 420 420" class="illustration-svg">
+                    <defs>
+                        <linearGradient id="illuGrad" x1="0" y1="0" x2="1" y2="1">
+                            <stop offset="0%" stop-color="#2563eb"/>
+                            <stop offset="100%" stop-color="#06b6d4"/>
+                        </linearGradient>
+                    </defs>
+                    <circle cx="210" cy="210" r="180" fill="url(#illuGrad)" opacity="0.10"/>
+                    <circle cx="210" cy="210" r="130" fill="url(#illuGrad)" opacity="0.14"/>
+
+                    <!-- Desk -->
+                    <rect x="60" y="300" width="300" height="14" rx="4" fill="#1e293b"/>
+                    <rect x="80" y="314" width="10" height="50" fill="#1e293b"/>
+                    <rect x="330" y="314" width="10" height="50" fill="#1e293b"/>
+
+                    <!-- Monitor -->
+                    <rect x="130" y="150" width="160" height="110" rx="8" fill="#1e293b"/>
+                    <rect x="140" y="160" width="140" height="90" rx="4" fill="#0b1120"/>
+                    <rect x="200" y="260" width="20" height="16" fill="#1e293b"/>
+                    <rect x="180" y="276" width="60" height="8" rx="3" fill="#1e293b"/>
+
+                    <!-- Code lines on screen -->
+                    <rect x="152" y="172" width="50" height="6" rx="2" fill="#2563eb"/>
+                    <rect x="152" y="184" width="80" height="6" rx="2" fill="#06b6d4"/>
+                    <rect x="164" y="196" width="60" height="6" rx="2" fill="#60a5fa"/>
+                    <rect x="152" y="208" width="90" height="6" rx="2" fill="#e2e8f0" opacity="0.6"/>
+                    <rect x="164" y="220" width="40" height="6" rx="2" fill="#2563eb"/>
+                    <rect x="152" y="232" width="70" height="6" rx="2" fill="#06b6d4"/>
+
+                    <!-- Person (simple flat silhouette) -->
+                    <circle cx="210" cy="330" r="22" fill="#2563eb"/>
+                    <path d="M170 300 Q210 275 250 300 L250 300 Q245 355 210 355 Q175 355 170 300 Z" fill="#3b82f6"/>
+
+                    <!-- Floating tech chips -->
+                    <g>
+                        <rect x="40" y="110" width="56" height="30" rx="8" fill="#1e293b"/>
+                        <text x="68" y="130" text-anchor="middle" font-size="13" fill="#2563eb" font-weight="700">HTML</text>
+                    </g>
+                    <g>
+                        <rect x="330" y="90" width="56" height="30" rx="8" fill="#1e293b"/>
+                        <text x="358" y="110" text-anchor="middle" font-size="13" fill="#06b6d4" font-weight="700">CSS</text>
+                    </g>
+                    <g>
+                        <rect x="20" y="220" width="56" height="30" rx="8" fill="#1e293b"/>
+                        <text x="48" y="240" text-anchor="middle" font-size="12" fill="#60a5fa" font-weight="700">JS</text>
+                    </g>
+                    <g>
+                        <rect x="340" y="220" width="66" height="30" rx="8" fill="#1e293b"/>
+                        <text x="373" y="240" text-anchor="middle" font-size="12" fill="#2563eb" font-weight="700">REACT</text>
+                    </g>
+                </svg>
             </div>
         </div>
         <div class="scroll-indicator">
@@ -67,14 +172,105 @@
         </div>
     </section>
 
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="services-head reveal">
+            <div>
+                <p class="section-tag reveal"><span>What I Offer</span></p>
+                <h2 class="reveal" style="margin-bottom:0;">What do I offer?</h2>
+                <p class="services-sub">Frontend and web development services — responsive UI, React applications, and performance-focused interfaces.</p>
+            </div>
+            <a href="#contact" class="btn-primary services-cta">Get a Quote →</a>
+        </div>
+        <div class="services-list">
+            <div class="service-row reveal">
+                <span class="service-num">01.</span>
+                <div class="service-row-main">
+                    <svg class="service-visual" viewBox="0 0 60 60"><rect width="60" height="60" rx="14" fill="var(--accent-soft)"/><text x="30" y="38" text-anchor="middle" font-size="20" font-weight="800" fill="var(--accent)">&lt;/&gt;</text></svg>
+                    <div>
+                        <h3>Frontend Development</h3>
+                        <p>Building responsive, pixel-perfect web interfaces using HTML, CSS, JavaScript, and React.</p>
+                    </div>
+                </div>
+               
+            </div>
+            <div class="service-row reveal">
+                <span class="service-num">02.</span>
+                <div class="service-row-main">
+                    <svg class="service-visual" viewBox="0 0 60 60"><rect width="60" height="60" rx="14" fill="var(--accent-soft)"/><rect x="10" y="14" width="26" height="32" rx="3" fill="var(--accent)"/><rect x="40" y="20" width="12" height="20" rx="2" fill="var(--accent)" opacity="0.55"/></svg>
+                    <div>
+                        <h3>Responsive Web Design</h3>
+                        <p>Layouts that work flawlessly across mobile, tablet, and desktop — no broken experiences.</p>
+                    </div>
+                </div>
+               
+            </div>
+            <div class="service-row reveal">
+                <span class="service-num">03.</span>
+                <div class="service-row-main">
+                    <svg class="service-visual" viewBox="0 0 60 60"><rect width="60" height="60" rx="14" fill="var(--accent-soft)"/><circle cx="30" cy="30" r="4" fill="var(--accent)"/><ellipse cx="30" cy="30" rx="18" ry="7" fill="none" stroke="var(--accent)" stroke-width="2.5"/><ellipse cx="30" cy="30" rx="18" ry="7" fill="none" stroke="var(--accent)" stroke-width="2.5" transform="rotate(60 30 30)"/><ellipse cx="30" cy="30" rx="18" ry="7" fill="none" stroke="var(--accent)" stroke-width="2.5" transform="rotate(120 30 30)"/></svg>
+                    <div>
+                        <h3>React Applications</h3>
+                        <p>Interactive, component-based interfaces and dashboards built with React and hooks.</p>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="service-row reveal">
+                <span class="service-num">04.</span>
+                <div class="service-row-main">
+                    <svg class="service-visual" viewBox="0 0 60 60"><rect width="60" height="60" rx="14" fill="var(--accent-soft)"/><path d="M22 20 L30 30 L22 40" stroke="var(--accent)" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/><line x1="32" y1="40" x2="42" y2="40" stroke="var(--accent)" stroke-width="3" stroke-linecap="round"/></svg>
+                    <div>
+                        <h3>Clean, Maintainable Code</h3>
+                        <p>Well-structured code that's easy to hand off, extend, and maintain long after delivery.</p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Resume Section -->
+    <section id="resume" class="resume">
+        <p class="section-tag reveal"><span>Background</span></p>
+        <h2 class="reveal">Experience</h2>
+        <div class="resume-grid resume-grid-single">
+            <div class="resume-col reveal">
+                <h3 class="resume-col-title">💼 Experience</h3>
+                <div class="resume-item">
+                    <p class="resume-duration">12 Months · Most Recent</p>
+                    <h4>Frontend Developer</h4>
+                    <p class="resume-place">Glomico</p>
+                    <p class="resume-desc">Developed dashboard and front-end interfaces using React.</p>
+                </div>
+                <div class="resume-item">
+                    <p class="resume-duration">6–10 Months</p>
+                    <h4>Frontend Developer</h4>
+                    <p class="resume-place">Healthcare Platform</p>
+                    <p class="resume-desc">Designed and developed the front-end for a healthcare platform.</p>
+                </div>
+                <div class="resume-item">
+                    <p class="resume-duration">1 Year</p>
+                    <h4>Frontend Developer</h4>
+                    <p class="resume-place">Metro-Online (B2B Platform)</p>
+                    <p class="resume-desc">Built dashboard interfaces and the company website front-end using HTML, CSS, and JavaScript, with some React.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- About Section -->
     <section id="about" class="about">
-        <p class="section-tag reveal">Get To Know Me</p>
+        <p class="section-tag reveal"><span>Get To Know Me</span></p>
         <h2 class="reveal">About Me</h2>
         <div class="about-container">
             <div class="about-image reveal">
                 <div class="image-glow"></div>
-                <div class="image-placeholder">AS</div>
+                <img class="image-placeholder" src="images/about-photo.jpg" alt="Amber Syed">
+                <div class="about-badge badge-1">⚛️ React</div>
+                <div class="about-badge badge-2">HTML5</div>
+                <div class="about-badge badge-3">CSS3</div>
+                <div class="about-badge badge-4">JS</div>
             </div>
             <div class="about-text">
                 <p class="reveal">I'm a frontend developer focused on building websites that are not just visually appealing but also fast, accessible, and easy to use. I care about clean code, attention to detail, and delivering work that matches exactly what a client has in mind — every time.</p>
@@ -102,7 +298,7 @@
 
     <!-- Skills Section -->
     <section id="skills" class="skills">
-        <p class="section-tag reveal">What I Work With</p>
+        <p class="section-tag reveal"><span>What I Work With</span></p>
         <h2 class="reveal">Skills & Tools</h2>
         <div class="skills-grid">
             <div class="skill-card reveal">
@@ -152,18 +348,32 @@
 
     <!-- Projects Section -->
     <section id="projects" class="projects">
-        <p class="section-tag reveal">My Recent Work</p>
-        <h2 class="reveal">Featured Projects</h2>
+        <div class="services-head reveal">
+            <div>
+                <p class="section-tag reveal"><span>My Recent Work</span></p>
+                <h2 class="reveal" style="margin-bottom:0;">Featured Projects</h2>
+                <p class="services-sub">Selected frontend projects — built with HTML, CSS, JavaScript, and React.</p>
+            </div>
+            <a href="https://github.com/ambersyed195-ship-it" target="_blank" class="btn-primary services-cta">View All Projects →</a>
+        </div>
+        <div class="filter-tabs reveal">
+            <button class="filter-btn active" data-filter="all">All Projects</button>
+            <button class="filter-btn" data-filter="React">App Dev</button>
+            <button class="filter-btn" data-filter="HTML">Web Design</button>
+            <button class="filter-btn" data-filter="JavaScript">JavaScript</button>
+        </div>
         <div class="projects-grid">
-            <div class="project-card reveal">
+
+            <!-- 1. Tasty Bites -->
+            <div class="project-card reveal" data-tags="HTML,JavaScript">
                 <div class="project-image">
-                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=500&q=80" alt="Tasty Bites Restaurant Website">
+                    <img src="images/tasty-bites.jpg" alt="Tasty Bites restaurant website menu page" class="mockup-svg">
                     <div class="project-overlay">
-                        <a href="https://precious-cheesecake-db7da1.netlify.app/" target="_blank" class="overlay-link">View Live</a>
+                        <a href="https://tastbiteszone.netlify.app/" target="_blank" class="overlay-link">View Live</a>
                     </div>
                 </div>
                 <div class="project-info">
-                    <h3>Tasty Bites - Restaurant Website</h3>
+                    <h3><a href="projects/tasty-bites.html" class="project-title-link">Tasty Bites — Restaurant Website</a></h3>
                     <p>A fully responsive restaurant landing page with a filterable menu, image gallery with lightbox, testimonial slider, and validated contact form.</p>
                     <div class="project-tags">
                         <span>HTML</span>
@@ -171,46 +381,91 @@
                         <span>JavaScript</span>
                     </div>
                     <div class="project-links">
-                        <a href="https://precious-cheesecake-db7da1.netlify.app/" target="_blank" class="btn-outline-small">Live Demo</a>
+                        <a href="projects/tasty-bites.html" class="btn-outline-small btn-details">Details</a>
+                        <a href="https://tastbiteszone.netlify.app/" target="_blank" class="btn-outline-small">Live Demo</a>
                         <a href="https://github.com/ambersyed195-ship-it/restaurant-landing-page" target="_blank" class="btn-outline-small">Source Code</a>
                     </div>
                 </div>
             </div>
 
-            <div class="project-card placeholder-card reveal">
-                <div class="project-image placeholder-image">
-                    <span>🚀 Coming Soon</span>
+            <!-- 2. Lumora E-commerce -->
+            <div class="project-card reveal" data-tags="HTML,JavaScript">
+                <div class="project-image">
+                    <img src="images/lumora.jpg" alt="Lumora e-commerce store product grid" class="mockup-svg">
+                    <div class="project-overlay">
+                        <a href="https://commercpage.netlify.app/" target="_blank" class="overlay-link">View Live</a>
+                    </div>
                 </div>
                 <div class="project-info">
-                    <h3>E-Commerce Product Page</h3>
-                    <p>A modern, responsive product listing page with filtering and sorting — currently in progress.</p>
+                    <h3><a href="projects/lumora-ecommerce.html" class="project-title-link">Lumora — E-Commerce Store</a></h3>
+                    <p>A multi-page fashion storefront with working cart, wishlist, category filters, sort, and a full checkout flow with order summary and payment method selection.</p>
                     <div class="project-tags">
                         <span>HTML</span>
                         <span>CSS</span>
                         <span>JavaScript</span>
                     </div>
-                </div>
-            </div>
-
-            <div class="project-card placeholder-card reveal">
-                <div class="project-image placeholder-image">
-                    <span>🚀 Coming Soon</span>
-                </div>
-                <div class="project-info">
-                    <h3>React Task Manager</h3>
-                    <p>A dynamic to-do / task management app built with React and hooks — currently in progress.</p>
-                    <div class="project-tags">
-                        <span>React</span>
-                        <span>JavaScript</span>
+                    <div class="project-links">
+                        <a href="projects/lumora-ecommerce.html" class="btn-outline-small btn-details">Details</a>
+                        <a href="https://commercpage.netlify.app/" target="_blank" class="btn-outline-small">Live Demo</a>
+                        <a href="https://github.com/ambersyed195-ship-it/E-Commerce" target="_blank" class="btn-outline-small">Source Code</a>
                     </div>
                 </div>
             </div>
+
+            <!-- 4. TaskFlow SaaS Dashboard -->
+            <div class="project-card reveal" data-tags="React">
+                <div class="project-image">
+                    <img src="images/taskflow.jpg" alt="TaskFlow project management dashboard" class="mockup-svg">
+                    <div class="project-overlay">
+                        <a href="https://fantastic-entremet-7d2d09.netlify.app/" target="_blank" class="overlay-link">View Live</a>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3><a href="projects/taskflow-dashboard.html" class="project-title-link">TaskFlow — Project Management Dashboard</a></h3>
+                    <p>A Jira/Linear-style dashboard with a drag-and-drop Kanban board, list view, task details with comments and subtasks, dashboard stats, and team workload charts.</p>
+                    <div class="project-tags">
+                        <span>React</span>
+                        <span>Context API</span>
+                        <span>Drag & Drop</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="projects/taskflow-dashboard.html" class="btn-outline-small btn-details">Details</a>
+                        <a href="https://fantastic-entremet-7d2d09.netlify.app/" target="_blank" class="btn-outline-small">Live Demo</a>
+                        <a href="https://github.com/ambersyed195-ship-it/React-task" target="_blank" class="btn-outline-small">Source Code</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5. Pace SaaS Landing -->
+            <div class="project-card reveal" data-tags="HTML,JavaScript">
+                <div class="project-image">
+                    <img src="images/pace.jpg" alt="Pace SaaS landing page hero section" class="mockup-svg">
+                    <div class="project-overlay">
+                        <a href="https://paceworkspace.netlify.app/" target="_blank" class="overlay-link">View Live</a>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3><a href="projects/pace-saas-landing.html" class="project-title-link">Pace — SaaS Landing Page</a></h3>
+                    <p>A polished marketing landing page for a fictional project-management SaaS, with an interactive live demo widget, testimonials, and a feature breakdown.</p>
+                    <div class="project-tags">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="projects/pace-saas-landing.html" class="btn-outline-small btn-details">Details</a>
+                        <a href="https://paceworkspace.netlify.app/" target="_blank" class="btn-outline-small">Live Demo</a>
+                        <a href="https://github.com/ambersyed195-ship-it/pace-saas-website" target="_blank" class="btn-outline-small">Source Code</a>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </section>
 
     <!-- Testimonials / Why Work With Me Section -->
     <section id="testimonials" class="testimonials">
-        <p class="section-tag reveal">Why Work With Me</p>
+        <p class="section-tag reveal"><span>Why Work With Me</span></p>
         <h2 class="reveal">What Clients Can Expect</h2>
         <div class="expect-grid">
             <div class="expect-card reveal">
@@ -233,7 +488,7 @@
 
     <!-- Contact Section -->
     <section id="contact" class="contact">
-        <p class="section-tag reveal">Get In Touch</p>
+        <p class="section-tag reveal"><span>Get In Touch</span></p>
         <h2 class="reveal">Let's Work Together</h2>
         <p class="contact-subtitle reveal">Have a project in mind? I'd love to hear about it.</p>
         <div class="contact-container">
@@ -254,22 +509,35 @@
                 <p class="form-success" id="formSuccess">Thanks for reaching out! I'll get back to you soon.</p>
             </form>
             <div class="contact-info reveal">
-                <div class="contact-item">
-                    <h4>Email</h4>
-                    <p>amber.syed.dev@gmail.com</p>
-                </div>
-                <div class="contact-item">
-                    <h4>Location</h4>
-                    <p>Lahore, Pakistan</p>
-                </div>
-                <div class="contact-item">
-                    <h4>Availability</h4>
-                    <p>Open to freelance projects</p>
-                </div>
-                <div class="social-links">
-                    <a href="https://github.com/ambersyed195-ship-it" target="_blank">GitHub</a>
-                    <a href="#" target="_blank">LinkedIn</a>
-                    <a href="#" target="_blank">Upwork</a>
+                <a href="https://wa.me/923229653604" target="_blank" class="contact-card">
+                    <span class="contact-card-icon">💬</span>
+                    <span class="contact-card-text">
+                        <h4>WhatsApp</h4>
+                        <p>+92 322 9653604</p>
+                        <span class="contact-card-hint">Click here to message me on WhatsApp</span>
+                    </span>
+                </a>
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=ambersyed462@gmail.com" target="_blank" class="contact-card">
+                    <span class="contact-card-icon">✉️</span>
+                    <span class="contact-card-text">
+                        <h4>Email</h4>
+                        <p>ambersyed462@gmail.com</p>
+                        <span class="contact-card-hint">Click here to send me an email on Gmail</span>
+                    </span>
+                </a>
+                <a href="https://github.com/ambersyed195-ship-it" target="_blank" class="contact-card">
+                    <span class="contact-card-icon">🐙</span>
+                    <span class="contact-card-text">
+                        <h4>GitHub</h4>
+                        <p>ambersyed195-ship-it</p>
+                    </span>
+                </a>
+                <div class="contact-card contact-card-static">
+                    <span class="contact-card-icon">📍</span>
+                    <span class="contact-card-text">
+                        <h4>Address</h4>
+                        <p>Venus Housing, Lahore, Punjab, Pakistan</p>
+                    </span>
                 </div>
             </div>
         </div>
@@ -278,7 +546,7 @@
     <!-- Footer -->
     <footer>
         <div class="footer-content">
-            <div class="logo">Amber<span>.dev</span></div>
+            <div class="logo">Amber Syed</div>
             <p>&copy; 2026 Amber Syed. All rights reserved.</p>
         </div>
     </footer>
