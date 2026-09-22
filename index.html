@@ -492,21 +492,23 @@
         <h2 class="reveal">Let's Work Together</h2>
         <p class="contact-subtitle reveal">Have a project in mind? I'd love to hear about it.</p>
         <div class="contact-container">
-            <form class="contact-form reveal" id="contactForm" novalidate>
+            <form class="contact-form reveal" id="contactForm" action="https://formspree.io/f/mqpaqdbg" method="POST" novalidate>
+                <input type="hidden" name="_subject" value="New message from your portfolio contact form">
                 <div class="form-group">
-                    <input type="text" id="name" placeholder="Your Name">
+                    <input type="text" id="name" name="name" placeholder="Your Name">
                     <span class="error-msg" id="nameError"></span>
                 </div>
                 <div class="form-group">
-                    <input type="email" id="email" placeholder="Your Email">
+                    <input type="email" id="email" name="email" placeholder="Your Email">
                     <span class="error-msg" id="emailError"></span>
                 </div>
                 <div class="form-group">
-                    <textarea id="message" placeholder="Tell me about your project" rows="5"></textarea>
+                    <textarea id="message" name="message" placeholder="Tell me about your project" rows="5"></textarea>
                     <span class="error-msg" id="messageError"></span>
                 </div>
-                <button type="submit" class="btn-primary">Send Message</button>
+                <button type="submit" class="btn-primary" id="submitBtn">Send Message</button>
                 <p class="form-success" id="formSuccess">Thanks for reaching out! I'll get back to you soon.</p>
+                <p class="error-msg" id="formError" style="text-align:center; margin-top:10px;"></p>
             </form>
             <div class="contact-info reveal">
                 <a href="https://wa.me/923229653604" target="_blank" class="contact-card">

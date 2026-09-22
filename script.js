@@ -190,12 +190,14 @@ filterButtons.forEach(btn => {
     });
 });
 
-// ===== Contact form validation =====
+// ===== Contact form validation + real submission via Formspree =====
 const contactForm = document.getElementById('contactForm');
 const nameInput = document.getElementById('name');
 const emailInput = document.getElementById('email');
 const messageInput = document.getElementById('message');
 const formSuccess = document.getElementById('formSuccess');
+const formError = document.getElementById('formError');
+const submitBtn = document.getElementById('submitBtn');
 
 function showError(input, errorId, message) {
     input.classList.add('invalid');
@@ -236,11 +238,34 @@ contactForm.addEventListener('submit', (e) => {
         clearError(messageInput, 'messageError');
     }
 
-    if (isValid) {
-        formSuccess.classList.add('show');
-        contactForm.reset();
-        setTimeout(() => {
-            formSuccess.classList.remove('show');
-        }, 4000);
-    }
+    if (!isValid) return;
+
+    // Clear any previous error state and show a submitting state
+    formError.textContent = '';
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Sending...';
+
+    fetch(contactForm.action, {
+        method: 'POST',
+        body: new FormData(contactForm),
+        headers: { 'Accept': 'application/json' },
+    })
+        .then((response) => {
+            if (response.ok) {
+                formSuccess.classList.add('show');
+                contactForm.reset();
+                setTimeout(() => {
+                    formSuccess.classList.remove('show');
+                }, 5000);
+            } else {
+                formError.textContent = "Something went wrong sending your message. Please try emailing me directly instead.";
+            }
+        })
+        .catch(() => {
+            formError.textContent = "Couldn't send your message — please check your connection and try again, or email me directly.";
+        })
+        .finally(() => {
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Send Message';
+        });
 });
